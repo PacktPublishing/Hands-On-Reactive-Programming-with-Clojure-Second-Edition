@@ -1,0 +1,7 @@
+.input-div {
+    margin: 5px 0;
+}
+.label {
+    display: inline-block;
+    min-width: 60px;
+}
