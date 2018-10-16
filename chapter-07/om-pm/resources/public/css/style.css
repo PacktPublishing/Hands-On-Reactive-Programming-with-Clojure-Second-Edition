@@ -1,0 +1,17 @@
+.column {
+    width: 30%;
+    float: left;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.column-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card {
+    border: 1px solid;
+    margin: 10px 0;
+    padding: 5px;
+}
