@@ -10,7 +10,7 @@
     (go (>! result (get-data)))
     result))
 
-#_(go (let [result  (<! (->> (process "data")
+#_(go (let [result  (<! (->> (process)
                            (map> #(* % %))
                            (map> #(prn %))))]
       (prn "result is: " result)))
@@ -30,7 +30,7 @@
                           e))))
     result))
 
-(go (try (let [result  (<? (->> (process "data")
+(go (try (let [result  (<? (->> (process)
                                     (map> #(* % %))
                                     (map> #(prn %))))]
                (prn "result is: " result))

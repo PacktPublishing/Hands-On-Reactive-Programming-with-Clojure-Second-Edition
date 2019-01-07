@@ -7,7 +7,6 @@
 (def rx-take js/rxjs.operators.take)
 (def rx-map js/rxjs.operators.map)
 (def app-time (rx-interval 10))
-(def rx-time (rx-interval 10))
 
 (.log js/console "hello clojurescript")
 
@@ -29,7 +28,7 @@
 (.log js/console (str (sine-coord 50)))
 
 (def sine-wave
-  (.pipe rx-time (rx-map sine-coord)))
+  (.pipe app-time (rx-map sine-coord)))
 
 (-> app-time
     (.pipe (rx-take 5))

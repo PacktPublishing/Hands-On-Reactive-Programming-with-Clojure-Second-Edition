@@ -11,7 +11,7 @@
                        :on-close :exit))
 
 (def price-label       (label "Price: -"))
-(def running-avg-label (label "Running average: -"))
+(def running-avg-label (label "Running average (5): -"))
 
 (config! main-frame :content
          (border-panel
