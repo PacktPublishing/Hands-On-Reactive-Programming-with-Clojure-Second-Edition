@@ -1,7 +1,10 @@
 (ns sine-wave.core)
 
-(def canvas (.getElementById js/document "myCanvas"))
-(def ctx    (.getContext canvas "2d"))
+(defn canvas []
+  (.getElementById js/document "myCanvas"))
+
+(defn ctx []
+  (.getContext (canvas) "2d"))
 
 (def rx-interval js/rxjs.interval)
 (def rx-take js/rxjs.operators.take)
@@ -36,8 +39,8 @@
                   (.log js/console (sine-coord num) ))))
 
 (defn fill-rect [x y colour]
-  (set! (.-fillStyle ctx) colour)
-  (.fillRect ctx x y 2 2))
+  (set! (.-fillStyle (ctx)) colour)
+  (.fillRect (ctx) x y 2 2))
 
 ;;; Draw an orange line
 (-> app-time
@@ -79,8 +82,3 @@
     (.pipe (rx-take 700))
     (.subscribe (fn [[{:keys [x y]} colour]]
                   (fill-rect x y colour))))
-
-(defn on-js-reload []
-;; Clear canvas before doing anything else
-  (.clearRect ctx 0 0 (.-width canvas) (.-height canvas))
-  )
