@@ -3,6 +3,7 @@
             [dommy.core :as dommy]))
 
 (enable-console-print!)
+(def mouse-pos-selector (dommy/sel1 :#mouse-xy))
 
 (def mouse-pos-stream (r/event-stream))
 (set! (.-onmousemove js/document)
@@ -11,7 +12,7 @@
 
 (r/subscribe mouse-pos-stream
              (fn [[x y]]
-               (dommy/set-text! (dommy/sel1 :#mouse-xy)
+               (dommy/set-text! mouse-pos-selector
                                 (str "(" x "," y ")"))))
 
 
