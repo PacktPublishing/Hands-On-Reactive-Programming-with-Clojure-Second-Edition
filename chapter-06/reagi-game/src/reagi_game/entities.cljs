@@ -22,11 +22,11 @@
                        (assoc :x     (shape-x ship))
                        (assoc :y     (shape-y ship))
                        (assoc :angle (shape-angle ship))))
-                 (fn [ctx val]
+                 (fn [ctx {:keys [x y angle]}]
                    (-> ctx
                        canvas/save
-                       (canvas/translate (:x val) (:y val))
-                       (canvas/rotate (:angle val))
+                       (canvas/translate x y)
+                       (canvas/rotate angle)
                        (canvas/begin-path)
                        (canvas/move-to 50 0)
                        (canvas/line-to 0 -15)
@@ -39,23 +39,20 @@
 (defn make-bullet-entity [monet-canvas key shape]
   (canvas/entity {:x (shape-x shape) :y (shape-y shape) :angle (shape-angle shape)}
                  (fn [value]
-                   (when (not
+                   (when-not
                            (geom/contained?
                              {:x 0 :y 0
                               :w (.-width (:canvas monet-canvas))
                               :h (.-height (:canvas monet-canvas))}
-                             {:x (shape-x shape) :y (shape-y shape) :r 5}))
+                             {:x (shape-x shape) :y (shape-y shape) :r 5})
                      (canvas/remove-entity monet-canvas key))
                    (move-forward! shape)
-                   (-> value
-                       (assoc :x     (shape-x shape))
-                       (assoc :y     (shape-y shape))
-                       (assoc :angle (shape-angle shape))))
-                 (fn [ctx val]
+                   (assoc value :x (shape-x shape) :y (shape-y shape) :angle (shape-angle shape)))
+                 (fn [ctx {:keys [x y angle]}]
                    (-> ctx
                        canvas/save
-                       (canvas/translate (:x val) (:y val))
-                       (canvas/rotate (:angle val))
+                       (canvas/translate x y)
+                       (canvas/rotate angle)
                        (canvas/fill-style "red")
                        (canvas/circle {:x 10 :y 0 :r 5})
                        canvas/restore))))
