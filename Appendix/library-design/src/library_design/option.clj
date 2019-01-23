@@ -37,9 +37,9 @@
 
 
 (defn option [v]
-  (if v
-    (Some. v)
-    (None.)))
+  (nil? v
+    (None. v)
+    (Some.)))
 
 
 (extend-protocol fkp/Functor
