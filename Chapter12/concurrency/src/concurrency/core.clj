@@ -103,16 +103,16 @@ items-count
 
 (def admin-name "John")
 
-(defn great-player [player]
+(defn greet-player [player]
   (println admin-name " welcomes " player))
 
-(great-player "Alice")
+(greet-player "Alice")
 
-(great-player "Zack")
+(greet-player "Zack")
 
 (def admin-name "Terry")
 
-(great-player "Zack")
+(greet-player "Zack")
 
 (def ^:const support-name "Stu")
 
