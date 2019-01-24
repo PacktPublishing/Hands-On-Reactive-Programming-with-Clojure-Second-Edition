@@ -368,3 +368,4 @@
 ;; #<Future@3fd0b0d0: #<Success@1e08486b: {:avg 56.666668,
 ;;                                         :median 60,
 ;;                                         :std-dev 12.472191289246473}>>
+;; Please note that this snippet of code generates a varying result
