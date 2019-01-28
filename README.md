@@ -1,18 +1,25 @@
-# 
+# Hands-On Reactive Programming with Clojure - Second Edition
 
-<a href=""><img src="" alt="" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/application-development/hands-reactive-programming-clojure-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789346138 "><img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B10994_NEW2.png" alt="Hands-On Reactive Programming with Clojure - Second Edition" height="256px" align="right"></a>
 
-This is the code repository for [](), published by Packt.
+This is the code repository for [Hands-On Reactive Programming with Clojure - Second Edition](https://www.packtpub.com/application-development/hands-reactive-programming-clojure-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789346138 ), published by Packt.
 
-**Create asynchronous, event-based, and concurrent applications**
+**Create asynchronous, event-based, and concurrent applications	**
 
 ## What is this book about?
-0
+Reactive Programming is central to many concurrent systems, and can help make the process of developing highly concurrent, event-driven, and asynchronous applications simpler and less error-prone.
 
 This book covers the following exciting features:
+Understand how to think in terms of time-varying values and event streams 
+Create, compose, and transform observable sequences using Reactive extensions 
+Build a CES framework from scratch using core.async as its foundation 
+Develop a simple ClojureScript game using Reagi 
+Integrate Om and RxJS in a web application 
+Implement a reactive API in Amazon Web Services (AWS) 
+Discover helpful approaches to backpressure and error handling 
+Get to grips with futures and their applications 
 
-
-If you feel this book is for you, get your [copy](https://www.amazon.com/dp/) today!
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1789346134) today!
 
 <a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
 alt="https://www.packtpub.com/" border="5" /></a>
