@@ -10,14 +10,14 @@ This is the code repository for [Hands-On Reactive Programming with Clojure - Se
 Reactive Programming is central to many concurrent systems, and can help make the process of developing highly concurrent, event-driven, and asynchronous applications simpler and less error-prone.
 
 This book covers the following exciting features:
-Understand how to think in terms of time-varying values and event streams 
-Create, compose, and transform observable sequences using Reactive extensions 
-Build a CES framework from scratch using core.async as its foundation 
-Develop a simple ClojureScript game using Reagi 
-Integrate Om and RxJS in a web application 
-Implement a reactive API in Amazon Web Services (AWS) 
-Discover helpful approaches to backpressure and error handling 
-Get to grips with futures and their applications 
+* Understand how to think in terms of time-varying values and event streams 
+* Create, compose, and transform observable sequences using Reactive extensions 
+* Build a CES framework from scratch using core.async as its foundation 
+* Develop a simple ClojureScript game using Reagi 
+* Integrate Om and RxJS in a web application 
+* Implement a reactive API in Amazon Web Services (AWS) 
+* Discover helpful approaches to backpressure and error handling 
+* Get to grips with futures and their applications 
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1789346134) today!
 
