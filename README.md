@@ -4,7 +4,7 @@
 
 This is the code repository for [Hands-On Reactive Programming with Clojure - Second Edition](https://www.packtpub.com/application-development/hands-reactive-programming-clojure-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789346138 ), published by Packt.
 
-**Create asynchronous, event-based, and concurrent applications	**
+**Create asynchronous, event-based, and concurrent applications**
 
 ## What is this book about?
 Reactive Programming is central to many concurrent systems, and can help make the process of developing highly concurrent, event-driven, and asynchronous applications simpler and less error-prone.
