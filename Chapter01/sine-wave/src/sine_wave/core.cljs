@@ -36,7 +36,7 @@
 (-> app-time
     (.pipe (rx-take 5))
     (.subscribe (fn [num]
-                  (.log js/console (sine-coord num) ))))
+                  (.log js/console (str (sine-coord num)) ))))
 
 (defn fill-rect [x y colour]
   (set! (.-fillStyle (ctx)) colour)
