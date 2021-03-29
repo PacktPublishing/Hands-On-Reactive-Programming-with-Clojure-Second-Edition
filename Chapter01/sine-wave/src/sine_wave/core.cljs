@@ -36,24 +36,25 @@
 (-> app-time
     (.pipe (rx-take 5))
     (.subscribe (fn [num]
-                  (.log js/console (str (sine-coord num)) ))))
+                  (.log js/console (str (sine-coord num))))))
 
 (defn fill-rect [x y colour]
   (set! (.-fillStyle (ctx)) colour)
   (.fillRect (ctx) x y 2 2))
 
+
 ;;; Draw an orange line
-(-> app-time
+(-> sine-wave
     (.pipe (rx-take 700))
     (.subscribe (fn [{:keys [x y]}]
                   (fill-rect x y "orange"))))
 
 (def colour (.pipe sine-wave
                    (rx-map
-                     (fn [{:keys [sin]}]
-                       (if (< sin 0)
-                         "red"
-                         "blue")))))
+                    (fn [{:keys [sin]}]
+                      (if (< sin 0)
+                        "red"
+                        "blue")))))
 
 ;;; Draw an alternating line
 (-> (js/rxjs.zip sine-wave colour)
@@ -74,8 +75,8 @@
 
 (def cycle-colour
   (rx-concat (.pipe red (rx-takeUntil mouse-click))
-          (rx-defer #(rx-concat (.pipe blue (rx-takeUntil mouse-click))
-                          cycle-colour))))
+             (rx-defer #(rx-concat (.pipe blue (rx-takeUntil mouse-click))
+                                   cycle-colour))))
 
 ;;; Draw a line that reacts on click
 (-> (js/rxjs.zip sine-wave cycle-colour)
